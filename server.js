@@ -5,9 +5,12 @@ const net = require("net");
 const server = net.createServer();
 
 server.on("connection", (socket) => {
-  console.log("new connection to server")
-})
+  console.log("new connection to server");
+  socket.on("data", (data) => {
+    console.log(data.toString("utf-8"));
+  });
+});
 
 server.listen(3000, "127.0.0.1", () => {
-  console.log("opened server on: ", server.address())
-})
+  console.log("opened server on: ", server.address());
+});
