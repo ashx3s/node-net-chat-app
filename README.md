@@ -16,7 +16,8 @@ This is my build of a tutorial in the Understanding Node.js: Core Concepts cours
     - clearLine
     - moveCursor
 - Identify users logged in:
-  - assign user Ids
+  - assign user ids on server
+  - improved message rendering with user "> User id: message" format
 
 ## Javascript Features
 
