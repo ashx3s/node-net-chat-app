@@ -15,6 +15,8 @@ This is my build of a tutorial in the Understanding Node.js: Core Concepts cours
   - improved command line text interface
     - clearLine
     - moveCursor
+- Identify users logged in:
+  - assign user Ids
 
 ## Javascript Features
 
