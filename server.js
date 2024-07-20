@@ -11,6 +11,12 @@ server.on("connection", (socket) => {
   console.log("new connection to server");
 
   const clientId = clients.length + 1;
+
+  // broadcast message to everyone when someone leaves chatroom
+  clients.map((client) => {
+    client.socket.write(`User ${clientId} joined`);
+  });
+
   socket.write(`id-${clientId}`);
 
   socket.on("data", (data) => {
@@ -22,6 +28,12 @@ server.on("connection", (socket) => {
     });
   });
 
+  // broadcast message to everyone when someone leaves chatroom
+  socket.on("end", () => {
+    clients.map((client) => {
+      client.socket.write(`User ${clientId} left`);
+    });
+  });
   clients.push({ id: clientId.toString(), socket });
 });
 
