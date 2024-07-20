@@ -18,6 +18,8 @@ This is my build of a tutorial in the Understanding Node.js: Core Concepts cours
 - Identify users logged in:
   - assign user ids on server
   - improved message rendering with user "> User id: message" format
+- Signal Joined User:
+  - when a user joins or leaves, make an annoucement
 
 ## Javascript Features
 
